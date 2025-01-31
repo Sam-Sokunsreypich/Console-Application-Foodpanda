@@ -11,7 +11,6 @@ public class Order extends Cart {
 
     public Order(List<Product> products) {
          this.products = products;
-         this.orderID = orderID;
          this.orderDate = new Date();
     }
 

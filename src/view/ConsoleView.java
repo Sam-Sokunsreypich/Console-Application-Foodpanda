@@ -11,6 +11,7 @@ public class ConsoleView {
 
     public void displayProducts(List<Product> products) {
         Table table = new Table(3, BorderStyle.UNICODE_BOX_DOUBLE_BORDER, ShownBorders.ALL); // Fix: Removed ShownBorders.ALL
+
         table.addCell("ID", new CellStyle(CellStyle.HorizontalAlign.center));
         table.addCell("Name", new CellStyle(CellStyle.HorizontalAlign.center));
         table.addCell("Price", new CellStyle(CellStyle.HorizontalAlign.center));
@@ -25,7 +26,7 @@ public class ConsoleView {
     }
 
     public void displayCart(List<Product> cartProducts) {
-        Table table = new Table(3, BorderStyle.UNICODE_BOX_DOUBLE_BORDER, ShownBorders.ALL); // Fix: Removed ShownBorders.ALL
+        Table table = new Table(3, BorderStyle.UNICODE_BOX_DOUBLE_BORDER, ShownBorders.ALL);
         table.addCell("ID", new CellStyle(CellStyle.HorizontalAlign.center));
         table.addCell("Name", new CellStyle(CellStyle.HorizontalAlign.center));
         table.addCell("Price", new CellStyle(CellStyle.HorizontalAlign.center));

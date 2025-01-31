@@ -6,8 +6,7 @@ import exception.ProductNotFoundException;
 import model.*;
 import view.ConsoleView;
 
-import javax.naming.AuthenticationException;
-import javax.security.auth.login.LoginException;
+
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -18,6 +17,7 @@ public class AuthController {
     SoundPlayer soundPlayer;
     public AuthController(User user) {
         this.user = user;
+        this.soundPlayer = new SoundPlayer();
     }
 
     public boolean login(String username, String password) throws InvalidCredentialsException {
@@ -52,10 +52,10 @@ public class AuthController {
                 System.out.print("Enter password: ");
                 String password = scanner.next();
                 loggedIn = authController.login(username, password);
-                soundPlayer.playSound("src/resources/success-1-6297.mp3");
+                soundPlayer.playSound("src/resources/success-1-6297.wav");
             } catch (InvalidCredentialsException e) {
                 System.out.println(e.getMessage());
-                soundPlayer.playSound("src/resources/invalid-selection-39351.mp3");
+                soundPlayer.playSound("src/resources/invalid-selection-39351.wav");
             }
         }
 

@@ -6,6 +6,7 @@ import javax.sound.sampled.Clip;
 import java.io.File;
 
 public class SoundPlayer {
+
     public void playSound(String fileName) {
         try{
             File soundFile = new File(fileName);
